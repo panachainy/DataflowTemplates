@@ -61,7 +61,7 @@ public class MqttToPubsub {
     if (options != null) {
       if ((options.getUsername() != null
               && (!options.getUsername().isEmpty() || !options.getUsername().isBlank()))
-          && (options.getPassword() != null
+          && (options.getPassword() == null
               || options.getPassword().isBlank()
               || options.getPassword().isEmpty())) {
         throw new IllegalArgumentException(
